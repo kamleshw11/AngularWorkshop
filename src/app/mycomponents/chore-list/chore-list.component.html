@@ -1,0 +1,31 @@
+<div class="text-success">
+    <h1>Yesterday's chores(Done chore) </h1>
+    <ul >
+        <!-- <li *ngFor="let chore of chores; index as i">{{chores[i]}}</li> -->
+       <p > <li *ngFor="let chore of ychores">{{chore}}</li></p>
+    </ul>
+    <hr>
+    <h1>Today's Chores (chore)</h1>
+    
+    <ul >
+        <!-- <li *ngFor="let chore of chores; index as i">{{chores[i]}}</li> -->
+       <p > <li *ngFor="let chore of tchores">{{chore}}</li></p>
+    </ul>
+    <div *ngIf="tchores.length==0 || ychores.length-tchores.length>=3 then thenBlock1 else elseBlock1"></div>
+<ng-template #thenBlock1><img src = "my-app\src\assets\abajabajaba.png"> </ng-template>
+<ng-template #elseBlock1><p>No allowances yet</p></ng-template>
+    
+
+    <!-- <p class="text-danger" *ngIf="ychores.length>tchores.length">Work Harder!</p> -->
+    <div *ngIf="tchores.length==0 && ychores.length>=4 then thenBlock else elseBlock"></div>
+<ng-template #thenBlock><h3>"Ice cream treat!"</h3></ng-template>
+<ng-template #elseBlock><h3>To earn an ice cream treat : </h3><br>The chores list must be empty <br> The done list must have atleast 4 items </ng-template>
+    
+    <hr>
+    <h1>Tomorrow's Chores</h1>
+    <ul >
+        <!-- <li *ngFor="let chore of chores; index as i">{{chores[i]}}</li> -->
+       <p > <li *ngFor="let chore of tmchores">{{chore}}</li></p>
+    </ul>
+</div>
+
