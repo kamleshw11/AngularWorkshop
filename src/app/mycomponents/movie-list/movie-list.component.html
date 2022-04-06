@@ -1,6 +1,28 @@
 <div class="text-primary">
-    <h4>Movie List</h4>
-    <ol >
-        <li *ngFor="let movie of movies" >{{movie.item}}</li>
-    </ol>
+
+    <h4>Movie to watch</h4>
+    <tbody>
+        <tr *ngFor="let movie of movies" class="mt">
+            <td style="float:left;">{{movie.item}}</td>
+            <td>
+                <button (click)='addToWatchedList(movie)' class="btn btn-success mx-3">ADD</button>
+            </td>
+
+        </tr>
+    </tbody>
+    <br>
+
+
+    <hr>
+    <h4>Watched Movie List</h4>
+    <tbody>
+        <tr *ngFor="let movie of watched" class="mt">
+            <td style="float:left;">{{movie.item}}</td>
+            <td>
+                <button (click)='removeFromWatchedList()' class="btn btn-success mx-3">remove</button>
+            </td>
+
+        </tr>
+    </tbody>
+
 </div>

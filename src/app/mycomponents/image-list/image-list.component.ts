@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImageListComponent implements OnInit {
 images=[
-  "https://source.unsplash.com/random/200x200/?coding,it",
-  "https://source.unsplash.com/random/200x200/?coding,it",
-  "https://source.unsplash.com/random/200x200/?coding,it",
-  "https://source.unsplash.com/random/200x200/?coding,it"
+  "https://source.unsplash.com/random/300x200/?coding,it",
+  "https://source.unsplash.com/random/300x200/?coding,it",
+  "https://source.unsplash.com/random/300x200/?coding,it",
+  "https://source.unsplash.com/random/300x200/?coding,it"
 ]
 // images=[
 //   {item:"https://source.unsplash.com/random/200x200/?coding,it"},
